@@ -1,5 +1,3 @@
-# statistical-analysis-of-seismic-data
-university project
 # Statistical Analysis of Italian Seismic Data: Extreme Value Theory & Information Dynamics
 
 Personal project developed for the *Advanced Statistics* exam within the Master's Degree program in **Physics of Complex Systems and Big Data**.
@@ -17,7 +15,7 @@ The dataset comprises seismic events in Central-Southern Italy from 1985 to 2025
 * **Depth Segmentation:** The catalog was split into Shallow ($d \le 70$ km) and Deep ($d > 70$ km) subsets.
 * **Declustering:** The Gardner-Knopoff algorithm was applied to remove aftershocks and dependent events, ensuring the Independent and Identically Distributed (i.i.d.) assumption required for EVT.
 
-![Total Earthquakes Time Series](assets/terremoti_totali_vs_t_cumulativa.jpg)
+![Total Earthquakes Time Series](assets/terremoti_totali_vs_t_cumulativa.png)
 
 ## 📈 Phase 1: Extreme Value Theory (EVT)
 The first part of the study focuses on the **Block Maxima Method**. By fitting the Generalized Extreme Value (GEV) distribution to the declustered seismic maxima using L-Moments and Generalized Maximum Likelihood (GML), we estimated the shape ($\xi$), location ($\mu$), and scale ($\sigma$) parameters. 
@@ -38,7 +36,7 @@ Based on the GEV fit, we calculated the expected Return Periods ($\tau$) for ext
 ## 🧠 Phase 2: Information Dynamics (Amatrice Swarm 2016-2017)
 The second part investigates the temporal correlations during the 2016-2017 Central Italy seismic swarm (Amatrice - Visso - Norcia - Campotosto). Rather than treating earthquakes as purely random Poisson processes, we analyzed the system's order-disorder transitions.
 
-![Swarm Time Series](assets/terremoti_vs_t_cumulativa.jpg)
+![Swarm Time Series](assets/terremoti_vs_t_cumulativa.png)
 
 We used moving windows to compute two key metrics over the inter-event times ($\Delta t$):
 * **Shannon Entropy ($H$):** To measure the degree of disorder and uncertainty in the seismic sequence.
@@ -51,7 +49,7 @@ We used moving windows to compute two key metrics over the inter-event times ($\
 By plotting the Shannon Entropy Power ($N_x$) against the Fisher Information ($I$), we mapped the dynamic trajectory of the seismic swarm. 
 The system normally resides in a disordered state (high entropy, low Fisher information). However, during the mainshocks, the trajectory violently shifts toward the **Cramér-Rao bound**, signifying a sudden drop in uncertainty and a high degree of organization (strong temporal correlation between events), before slowly relaxing back to the background noise level.
 
-![Fisher-Shannon Plane](assets/fisher_shannon_power_plane_final.jpg)
+![Fisher-Shannon Plane](assets/fisher_shannon_power_plane_final.png)
 
 ## 🛠️ Tech Stack
 * **Language:** Python
