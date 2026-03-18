@@ -28,17 +28,17 @@ The results yielded a negative shape parameter ($\xi < 0$), suggesting that the 
 ![GEV QQ Plot](assets/Final_QQ.png)
 
 ### Return Period & Seismic Risk (Exceedance Probability)
-Based on the GEV fit, we calculated the expected Return Periods ($\tau$) for extreme magnitudes and the Exceedance Probability over specific time horizons (e.g., 5, 40, and 80 years).
+Based on the GEV fit, I calculated the expected Return Periods ($\tau$) for extreme magnitudes and the Exceedance Probability over specific time horizons (e.g., 5, 40, and 80 years).
 
 ![Return Period](assets/Final_ReturnPeriod_Shallow.png)
 ![Risk Probability](assets/Final_Risk_Shallow.png)
 
 ## 🧠 Phase 2: Information Dynamics (Amatrice Swarm 2016-2017)
-The second part investigates the temporal correlations during the 2016-2017 Central Italy seismic swarm (Amatrice - Visso - Norcia - Campotosto). Rather than treating earthquakes as purely random Poisson processes, we analyzed the system's order-disorder transitions.
+The second part investigates the temporal correlations during the 2016-2017 Central Italy seismic swarm (Amatrice - Visso - Norcia - Campotosto). Rather than treating earthquakes as purely random Poisson processes, I analyzed the system's order-disorder transitions.
 
 ![Swarm Time Series](assets/terremoti_vs_t_cumulativa.png)
 
-We used moving windows to compute two key metrics over the inter-event times ($\Delta t$):
+I used moving windows to compute two key metrics over the inter-event times ($\Delta t$):
 * **Shannon Entropy ($H$):** To measure the degree of disorder and uncertainty in the seismic sequence.
 * **Fisher Information ($I$):** To quantify the local predictability and internal organization of the system.
 
@@ -46,7 +46,7 @@ We used moving windows to compute two key metrics over the inter-event times ($\
 ![Fisher Information](assets/fisher_info_time.png)
 
 ### The Fisher-Shannon Power Plane
-By plotting the Shannon Entropy Power ($N_x$) against the Fisher Information ($I$), we mapped the dynamic trajectory of the seismic swarm. 
+By plotting the Shannon Entropy Power ($N_x$) against the Fisher Information ($I$), I mapped the dynamic trajectory of the seismic swarm. 
 The system normally resides in a disordered state (high entropy, low Fisher information). However, during the mainshocks, the trajectory violently shifts toward the **Cramér-Rao bound**, signifying a sudden drop in uncertainty and a high degree of organization (strong temporal correlation between events), before slowly relaxing back to the background noise level.
 
 ![Fisher-Shannon Plane](assets/fisher_shannon_power_plane_final.png)
